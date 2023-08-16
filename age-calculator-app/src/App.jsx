@@ -4,9 +4,9 @@ function App() {
 
 
   return (
-    <>
+    <div className="w-screen">
       <AgeCalculator />
-    </>
+    </div>
   )
 }
 
