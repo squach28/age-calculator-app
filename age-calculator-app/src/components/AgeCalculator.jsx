@@ -6,6 +6,7 @@ const AgeCalculator = () => {
     const [day, setDay] = useState('')
     const [month, setMonth] = useState('')
     const [year, setYear] = useState('')
+    const [result, setResult] = useState({day: '--', month: '--', year: '--'})
 
     const handleDayChange = (e) => {
         const day = e.target.value
@@ -34,7 +35,7 @@ const AgeCalculator = () => {
 
 
     return (
-        <div className="flex flex-col p-4 w-screen gap-10 m-5 bg-white rounded-md rounded-br-[100px]">
+        <div className="flex flex-col p-4 w-screen gap-10 m-5 bg-white rounded-lg rounded-br-[100px] md:max-w-lg">
             <div className="w-full flex justify-around gap-3">
                 <div className="flex flex-col">
                     <label className="uppercase text-smokeygrey" htmlFor="day">Day</label>
@@ -72,11 +73,11 @@ const AgeCalculator = () => {
             </div>
             <div className="flex items-center relative">
                 <hr className="border-1 w-full border-lightgrey" />
-                <img className="absolute m-auto left-[145px] md:static bg-purple rounded-full p-2" width="45px" src={ArrowIcon} alt="arrow pointing down"/>
+                <img className="absolute m-auto left-[135px] md:static bg-purple rounded-full p-3 cursor-pointer" width="50px" src={ArrowIcon} alt="arrow pointing down"/>
             </div>
-            <h1 className="text-6xl lowercase">38 years</h1>
-            <h1 className="text-6xl lowercase">3 months</h1>
-            <h1 className="text-6xl lowercase">38 days</h1>
+            <h1 className="text-5xl lowercase"><span className="text-purple">{result.year}</span> years</h1>
+            <h1 className="text-5xl lowercase"><span className="text-purple">{result.month}</span> months</h1>
+            <h1 className="text-5xl lowercase"><span className="text-purple">{result.day}</span> days</h1>
         </div>
     )
 }
