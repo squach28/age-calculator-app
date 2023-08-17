@@ -4,7 +4,7 @@ function App() {
 
 
   return (
-    <div className="w-screen">
+    <div className="w-screen bg-offwhite h-screen flex justify-center items-center">
       <AgeCalculator />
     </div>
   )
